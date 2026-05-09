@@ -1,14 +1,17 @@
 site_name: Numen-rpg wiki
 repo_url: https://github.com/Vergenter/numen-rpg_wiki
+
 theme:
   name: material
-  language: en
+  language: pl
   features:
     - navigation.sections
     - navigation.indexes
     - search.suggest
     - search.highlight
     - content.code.copy
+    - toc.integrate
+
 markdown_extensions:
   - toc:
       permalink: true
@@ -17,21 +20,102 @@ markdown_extensions:
   - attr_list
   - def_list
   - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+
 plugins:
-  - search:
-      prebuild_index: true
-      lang: ["en"]
-  - tags:
-      tags_file: tags.md
+  - search
   - awesome-pages
   - glightbox
   - minify:
       minify_html: true
-  - redirects
+
 extra_css:
   - styles/extra.css
+
+exclude_docs: |
+  tags.md
+  creatures/**
+  engineering/**
+  indexes/**
+  metaphysics/**
+  rules/**
+  world/**
+  editorial/changelog.md
+  editorial/style.md
+  editorial/writing-guide.md
+
 nav:
-  - Home: index.md
-  - Rules: rules/index.md
-  - World: world/index.md
-  - Creatures: creatures/index.md
+  - Start: index.md
+  - Wiki:
+      - imported/index.md
+      - Czarowanie: imported/czarowanie.md
+      - Człowiek: imported/czowiek.md
+      - Drzewko umiejętności: imported/drzewko-umiejetnosci.md
+      - Inżynieria runiczna: imported/inzynieria-runiczna.md
+      - Karta postaci: imported/karta-postaci.md
+      - Ko: imported/ko.md
+      - Magia: imported/magia.md
+      - Przestrzeń magiczna: imported/przestrzen-magiczna.md
+      - Rasa: imported/rasa.md
+      - Runa: imported/runa.md
+      - Runa elektryczności: imported/runa-elektrycznosci.md
+      - Runa fali: imported/runa-fali.md
+      - Runa lodu: imported/runa-lodu.md
+      - Runa miotania: imported/runa-miotania.md
+      - Runa ognia: imported/runa-ognia.md
+      - Runa promienia: imported/runa-promienia.md
+      - Runa pułapki dotyk: imported/runa-puapki-dotyk.md
+      - Runa stali: imported/runa-stali.md
+      - Runa stereometryczna: imported/runa-stereometryczna.md
+      - Runa wystrzału: imported/runa-wystrzau.md
+      - Runologia: imported/runologia.md
+      - Statystyka: imported/statystyka.md
+      - Słowo runiczne: imported/sowo-runiczne.md
+      - Test statystyki: imported/test-statystyki.md
+      - Umiejętność: imported/umiejetnosc.md
+      - Umiejętność/Atak: imported/umiejetnosc-atak.md
+      - Umiejętność/Charyzma: imported/umiejetnosc-charyzma.md
+      - Umiejętność/Dowodzenie: imported/umiejetnosc-dowodzenie.md
+      - Umiejętność/Fechtunek: imported/umiejetnosc-fechtunek.md
+      - Umiejętność/Hart: imported/umiejetnosc-hart.md
+      - Umiejętność/Ignorowanie bólu: imported/umiejetnosc-ignorowanie-bolu.md
+      - Umiejętność/Kontr styl walki: imported/umiejetnosc-kontr-styl-walki.md
+      - Umiejętność/Kowalstwo: imported/umiejetnosc-kowalstwo.md
+      - Umiejętność/Kreatywność: imported/umiejetnosc-kreatywnosc.md
+      - Umiejętność/Kunszt: imported/umiejetnosc-kunszt.md
+      - Umiejętność/Kusznictwo: imported/umiejetnosc-kusznictwo.md
+      - Umiejętność/Majętność: imported/umiejetnosc-majetnosc.md
+      - Umiejętność/Medytacja: imported/umiejetnosc-medytacja.md
+      - Umiejętność/Obrona sojusznika: imported/umiejetnosc-obrona-sojusznika.md
+      - Umiejętność/Percepcja: imported/umiejetnosc-percepcja.md
+      - Umiejętność/Pierwsza pomoc: imported/umiejetnosc-pierwsza-pomoc.md
+      - Umiejętność/Pismo runiczne: imported/umiejetnosc-pismo-runiczne.md
+      - Umiejętność/Podstawy alchemii: imported/umiejetnosc-podstawy-alchemii.md
+      - Umiejętność/Przelewanie myśli na papier: imported/umiejetnosc-przelewanie-mysli-na-papier.md
+      - Umiejętność/Rytuały magiczne: imported/umiejetnosc-rytuay-magiczne.md
+      - Umiejętność/Siła: imported/umiejetnosc-sia.md
+      - Umiejętność/Skradanie się: imported/umiejetnosc-skradanie-sie.md
+      - Umiejętność/Sprawność fizyczna: imported/umiejetnosc-sprawnosc-fizyczna.md
+      - Umiejętność/Strzelectwo: imported/umiejetnosc-strzelectwo.md
+      - Umiejętność/Szybkość: imported/umiejetnosc-szybkosc.md
+      - Umiejętność/Trening: imported/umiejetnosc-trening.md
+      - Umiejętność/Używanie artefaktów: imported/umiejetnosc-uzywanie-artefaktow.md
+      - Umiejętność/Walka bronią: imported/umiejetnosc-walka-bronia.md
+      - Umiejętność/Wiara(II era): imported/umiejetnosc-wiara-ii-era.md
+      - Umiejętność/Zdolności detektywistyczne: imported/umiejetnosc-zdolnosci-detektywistyczne.md
+      - Umiejętność/Zielarstwo: imported/umiejetnosc-zielarstwo.md
+      - Umiejętność/Zręczność: imported/umiejetnosc-zrecznosc.md
+      - Umiejętność/Zwinny cios: imported/umiejetnosc-zwinny-cios.md
+      - Umiejętność/Łucznictwo: imported/umiejetnosc-ucznictwo.md
+      - Vis: imported/vis.md
+      - Wprowadzenie: imported/wprowadzenie.md
+      - Zjawisko magiczne: imported/zjawisko-magiczne.md
+      - Kategoria: imported/category-kategoria.md
+      - Umiejętności: imported/category-umiejetnosci.md
+  - Braki: editorial/missing-pages.md
